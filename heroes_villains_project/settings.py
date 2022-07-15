@@ -35,6 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'super_types',
+    'supers',
+
 ]
 
 MIDDLEWARE = [
@@ -119,3 +123,4 @@ try:
     from heroes_villains_project.local_settings import *
 except ImportError:
         pass
+
