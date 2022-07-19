@@ -23,14 +23,14 @@ Total Wtd Points: /20
 2.	Visit the admin site
 3.	Seed two values (“Hero” and “Villain”) into the “super_type” table -->
 
-(/2.5 points) As a developer, I want to create a Super model in a “supers” app.
+<!-- (/2.5 points) As a developer, I want to create a Super model in a “supers” app.
 Property names must be in snake_case and match the following exactly!
 •	name - CharField
 •	alter_ego  - CharField
 •	primary_ability - CharField
 •	secondary_ability – CharField
 •	catchphrase – CharField
-•	super_type – ForeignKey
+•	super_type – ForeignKey -->
 
 (/2.5 points) As a developer, I want my API to serve the “supers” app’s content on the following urls paths:
 Paths must match these exactly!
