@@ -13,3 +13,7 @@ def Super_list (request):
     print (sort_param)
     serializer= SuperSerializer (supers, many=True)
     return Response (serializer.data)
+@api_view (['GET'])
+def super_detials(request,pk):
+    print(pk)
+    return Response(pk)
