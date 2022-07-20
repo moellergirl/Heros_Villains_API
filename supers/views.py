@@ -10,18 +10,17 @@ from.models import Super
 
 def Super_list (request):
     if request.method == 'GET':
-        super_type_param=request.query_params.get ('super_types')
-        sort_param=request.query_params.get('sort')
-        print(super_type_param)
-        print(sort_param)
-        supers=Super.objects.all()
-    if super_type_param:
-        supers = supers.filter(super_type__type=super_type_param)   
+        super_type_name= request.query_params.get('type')
+        print(super_type_name)
 
-    if sort_param:
-        supers= supers.order_by(sort_param)
-        serializer=SuperSerializer(supers, many=True)
+        queryset=Super.objects.all()
+
+    if super_type_name:
+        queryset =  queryset.filter(super_type__type=super_type_name) 
+        serializer=SuperSerializer(queryset, many=True)
         return Response (serializer.data)
+    
+   
 
     elif request.method == 'POST':
         serializer=SuperSerializer(data=request.data)
